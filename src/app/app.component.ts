@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
     public constructor() {
         this.platform = new H.service.Platform({
-          apikey: '{}'
+          apikey: 'HP392wrN-Ab_L4SUrK3lbj_uBk4TZaASf-kUizd8rNM'
         });
     }
 
@@ -26,8 +26,8 @@ export class AppComponent implements OnInit {
         let defaultLayers = this.platform.createDefaultLayers();
         let map = new H.Map(document.getElementById('map'),
         defaultLayers.vector.normal.map,{
-        center: {lat:52.5, lng:13.4},
-        zoom: 4,
+        center: {lat:20.5, lng:78.9},
+        zoom: 5,
         // pixelRatio: window.devicePixelRatio || 1
       });
 

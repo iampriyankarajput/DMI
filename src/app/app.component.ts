@@ -16,24 +16,30 @@ export class AppComponent implements OnInit {
 
     public constructor() {
         this.platform = new H.service.Platform({
-            "app_id": "APP-ID-HERE",
-            "app_code": "APP-CODE-HERE"
+          apikey: '{}'
         });
     }
 
-    public ngOnInit() { }
+    public ngOnInit() { 
 
-    public ngAfterViewInit() {
+    // public ngAfterViewInit() {
         let defaultLayers = this.platform.createDefaultLayers();
-        let map = new H.Map(
-            this.mapElement.nativeElement,
-            defaultLayers.normal.map,
-            {
-                zoom: 10,
-                center: { lng: 13.4, lat: 52.51},
-                zoomControl: true
-            }
-        );
-    }
+        let map = new H.Map(document.getElementById('map'),
+        defaultLayers.vector.normal.map,{
+        center: {lat:52.5, lng:13.4},
+        zoom: 4,
+        // pixelRatio: window.devicePixelRatio || 1
+      });
+
+      window.addEventListener('resize', () => map.getViewPort().resize());
+
+
+      var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+       var ui = H.ui.UI.createDefault(map, defaultLayers);
+      //  var ui = H.ui.UI.createDefault( );
+
+    // }
+  }
 
 }

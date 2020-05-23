@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HereMapComponent } from './here-map/here-map.component';
+import { LoginComponent } from './components/login/login.component';
+import { HereMapComponent } from './components/here-map/here-map.component';
 
 
 const routes: Routes = [
   {
     path: "",
-    component: HereMapComponent,
+    component: LoginComponent,
   }
 ];
 

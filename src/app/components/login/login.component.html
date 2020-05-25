@@ -1,33 +1,34 @@
 <div class="login-card">
-  <mat-card class="mat-card">
-    <mat-card-header>
-      <div class="header-text">
-        <mat-card-title>Login</mat-card-title>
-      </div>
+  <mat-card >
+    <mat-card-header style="justify-content: center;">
+      <mat-card-title>Login</mat-card-title>
     </mat-card-header>
+    <form  [formGroup]="signinForm" (ngSubmit)="loginUser()">
     <mat-card-content>
       <p>
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" style="width: 100%;">
           <mat-label>Username</mat-label>
           <mat-icon matPrefix>verified_user</mat-icon>
-          <input matInput [formControl]="email" required>
-          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          <input matInput formControlName="username" required>
+          <mat-error>Email is required</mat-error>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
+          <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" required>
           <mat-icon matPrefix>vpn_key</mat-icon>
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-            [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
+           [attr.aria-pressed]="hide">
+            <mat-icon >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button> 
+          <mat-error >Password is required</mat-error>
         </mat-form-field>
       </p>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary">Login</button>
+    <mat-card-actions style="margin-bottom: 20px;"> 
+      <button mat-raised-button color="primary" style="width: 100%;">Login</button>
     </mat-card-actions>
+  </form>
   </mat-card>
 </div>

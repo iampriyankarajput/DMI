@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HereMapComponent } from './components/here-map/here-map.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCardModule,
     MatButtonModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     MatFormFieldModule,FormsModule,ReactiveFormsModule,
     MatIconModule,MatInputModule
   ],

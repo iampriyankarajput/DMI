@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { HereMapComponent } from './components/here-map/here-map.component';
+import { HereMapComponent } from './components/Search/search.component';
 
 
 const routes: Routes = [

@@ -8,18 +8,18 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-  apiurl: string = "https://staging.sweet2th.app/api";
+export class ApiService {
+  url: string = "https://staging.sweet2th.app/api";
   constructor(private http: HttpClient, private router: Router) { }
 
   // user sign in api
   signIn(user: User) {
-    return this.http.post<any>(`${this.apiurl}/user/login/`, user)
+    return this.http.post<any>(`${this.url}/user/login/`, user)
   } 
 
   isLoggedIn(): boolean {
     let authToken = localStorage.getItem('access_token');
-    return (authToken !== null) ? true : false;
+    return (authToken != null) ;
   }
 
   doLogout() {

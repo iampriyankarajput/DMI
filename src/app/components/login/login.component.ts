@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { AuthService } from 'src/app/services/api.service';
+import { ApiService } from 'src/app/services/api.service';
 import { catchError, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { Router } from '@angular/router';
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   hide = true;
   error: any = ''
-  constructor(private api: AuthService, private fb: FormBuilder, private router: Router, private toastr: ToastrService) {
+  constructor(private api: ApiService, private fb: FormBuilder, private router: Router, private toastr: ToastrService) {
     this.loginForm = this.fb.group({
       username: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),

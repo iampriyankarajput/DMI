@@ -23,3 +23,4 @@ describe('HereMapComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+ 

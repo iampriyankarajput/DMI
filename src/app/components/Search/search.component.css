@@ -18,8 +18,8 @@ body {
   }
 
   .topnav .icon {
-    margin-top: 28px;
-    float:right;
-    margin-right: 26px;
+    position: absolute;
+    margin-top: 35px;
+    right:30px;
     font-size: 17px;
 }

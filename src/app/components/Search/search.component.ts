@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { AuthService } from '../../services/api.service';
+import { ApiService } from '../../services/api.service';
 import { Router } from '@angular/router';
 declare var H: any;
 
@@ -14,7 +14,7 @@ export class HereMapComponent implements OnInit {
   @ViewChild("map")
   public mapElement: ElementRef;
 
-  constructor(private api: AuthService, private router: Router) {
+  constructor(private api: ApiService, private router: Router) {
     this.platform = new H.service.Platform({
       apikey: 'HP392wrN-Ab_L4SUrK3lbj_uBk4TZaASf-kUizd8rNM'
     });

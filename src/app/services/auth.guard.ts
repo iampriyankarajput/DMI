@@ -8,13 +8,13 @@ import { ApiService } from './../services/api.service';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor( public authService: ApiService, public router: Router) { }
+  constructor( public api: ApiService, public router: Router) { }
 
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean  {
-      if (this.authService.isLoggedIn() != true) {
+      if (this.api.isLoggedIn() != true) {
         this.router.navigate(['/'])
       }
     return true;

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HereMapComponent } from './here-map.component';
+import { HereMapComponent } from './search.component';
 
 describe('HereMapComponent', () => {
   let component: HereMapComponent;
@@ -23,3 +23,4 @@ describe('HereMapComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+ 

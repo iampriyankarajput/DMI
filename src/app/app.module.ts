@@ -19,12 +19,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 import { SignupComponent } from './components/signup/signup.component';
+import { DrgDropComponent } from './components/drg-drop/drg-drop.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SearchComponent,
-    SignupComponent
+    SignupComponent,
+    DrgDropComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+<!-- <div id="opened" class="board-body" (ondrop)="drop($event)" (ondragover)="allowDrop($event)">
+    <div class="card bg-light-blue mb-2" id="drag1" draggable="true" (ondragstart)="drag($event)">
+        draggable card 1
+    </div>
+</div>
+<div id="responded" class="board-body" (ondrop)="drop($event)" (ondragover)="allowDrop($event)">
+    <div class="card bg-light-blue mb-2" id="drag2" draggable="true" (ondragstart)="drag($event)">
+        draggable card 2
+    </div>
+</div> -->
+ <button type="button" class="btn btn-primary" routerLink="/search">Search Map</button>
+
+<h2>Drag and Drop</h2>
+<div  id="div1" 
+      (drop)="drop($event)" 
+      (dragover)="allowDrop($event)">
+
+      <img 
+      src="https://images.pexels.com/photos/658687/pexels-photo-658687.jpeg?auto=compress&cs=tinysrgb&h=350" 
+      draggable="true" 
+      (dragstart)="drag($event)" 
+      id="drag1"
+      width="88" 
+      height="31">
+</div>
+
+<div id="div2" 
+  (drop)="drop($event)" 
+  (dragover)="allowDrop($event)"> 
+</div>

@@ -1,13 +1,20 @@
 <div class="register-card">
-    <mat-card>
+    <mat-card style="background-color: rgb(233, 227, 227);">
         <mat-card-header style="justify-content: center;">
-            <mat-card-title>Register</mat-card-title>
+            <mat-card-title>Signup</mat-card-title>
         </mat-card-header>
         <form [formGroup]="signUpForm">
             <mat-card-content>
                 <p>
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Username</mat-label>
+                        <mat-icon matPrefix>person</mat-icon>
+                        <input matInput formControlName="username">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Email</mat-label>
                         <mat-icon matPrefix>verified_user</mat-icon>
                         <input matInput formControlName="username" required>
                         <mat-error>Email is required</mat-error>

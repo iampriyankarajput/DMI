@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   hide = true;
   error: any = ''
+  
   constructor(private api: ApiService, private fb: FormBuilder, private router: Router, private toastr: ToastrService) {
     this.loginForm = this.fb.group({
       username: new FormControl('', [Validators.required]),
@@ -40,7 +41,7 @@ export class LoginComponent implements OnInit {
       console.log(res)
       localStorage.setItem('access_token', res.token)
       this.toastr.success('Login Successfully');
-      this.router.navigate(['/search']);
+      this.router.navigate(['/drag']);
     })
 
 
